@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestClient", "TestClient\Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPeer-Peer", "TestPeer-Peer\TestPeer-Peer.csproj", "{BEA8794C-0DC9-4754-A4DE-B3123B160666}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketListener", "SocketListener\SocketListener.csproj", "{4AB5224D-9D57-41C5-AF26-2EF5E5BF375B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketClient", "SocketClient\SocketClient.csproj", "{EBA271A6-B79A-4A83-8DDA-FAE3DC761ACD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{BEA8794C-0DC9-4754-A4DE-B3123B160666}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEA8794C-0DC9-4754-A4DE-B3123B160666}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEA8794C-0DC9-4754-A4DE-B3123B160666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AB5224D-9D57-41C5-AF26-2EF5E5BF375B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AB5224D-9D57-41C5-AF26-2EF5E5BF375B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AB5224D-9D57-41C5-AF26-2EF5E5BF375B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AB5224D-9D57-41C5-AF26-2EF5E5BF375B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBA271A6-B79A-4A83-8DDA-FAE3DC761ACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBA271A6-B79A-4A83-8DDA-FAE3DC761ACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBA271A6-B79A-4A83-8DDA-FAE3DC761ACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBA271A6-B79A-4A83-8DDA-FAE3DC761ACD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
