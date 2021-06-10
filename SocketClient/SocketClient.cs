@@ -28,6 +28,7 @@ namespace SocketClient
                 // If a host has multiple addresses, you will get a list of addresses  
                 IPHostEntry host = Dns.GetHostEntry("localhost");
                 IPAddress ipAddress = host.AddressList[0];
+                Console.WriteLine(ipAddress.ToString());
                 IPEndPoint remoteEP = new IPEndPoint(ipAddress, 11000);
 
                 // Create a TCP/IP  socket.    

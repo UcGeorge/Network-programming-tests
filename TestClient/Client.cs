@@ -70,6 +70,8 @@ namespace TestClient
             int port_Number = 1234;
             try
             {
+                Console.WriteLine("Press enter co connect... ");
+                Console.ReadLine();
                 myclient = new TcpClient(host_Name, port_Number);
             }
             catch

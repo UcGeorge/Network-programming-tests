@@ -1,5 +1,6 @@
 ﻿//Server Code
 using System;
+using System.Net;
 using System.Net.Sockets;
 using System.IO;
 
@@ -9,11 +10,10 @@ namespace Network_programming_tests
     class Server
     {
         //entry point of main method....
-        [Obsolete]
         public static void Main()
         {
             //TcpListener is listening on the given port... {
-            TcpListener tcpListener = new TcpListener(1234);
+            TcpListener tcpListener = new TcpListener(IPAddress.Loopback, 1234);
             tcpListener.Start();
             Console.WriteLine("Server Started");
             //Accepts a new connection...
@@ -25,17 +25,17 @@ namespace Network_programming_tests
             {
                 if (socketForClient.Connected)
                 {
+                    Console.WriteLine("Client connected");
+                    NetworkStream networkStream = new NetworkStream(socketForClient);
+                    StreamWriter streamWriter = new StreamWriter(networkStream);
+                    StreamReader streamReader = new StreamReader(networkStream);
                     while (true)
                     {
-                        Console.WriteLine("Client connected");
-                        NetworkStream networkStream = new NetworkStream(socketForClient);
-                        StreamWriter streamWriter = new StreamWriter(networkStream);
-                        StreamReader streamReader = new StreamReader(networkStream);
                         string line = streamReader.ReadLine();
-                        Console.WriteLine("Read:" + line);
-                        line = line.ToUpper() + "!";
+                        /*Console.WriteLine("Read:" + line);
+                        line = line.ToUpper() + "!";*/
                         streamWriter.WriteLine(line);
-                        Console.WriteLine("Wrote:" + line);
+                        /*Console.WriteLine("Wrote:" + line);*/
                         streamWriter.Flush();
                     }
                 }
